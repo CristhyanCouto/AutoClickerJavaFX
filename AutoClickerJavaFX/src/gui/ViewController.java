@@ -3,6 +3,7 @@ package gui;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import gui.util.Constraints;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Spinner;
@@ -27,12 +28,24 @@ public class ViewController implements Initializable {
 	int currentValueSpinner;
 	
 	@Override
-	public void initialize(URL arg0, ResourceBundle arg1) {
+	public void initialize(URL url, ResourceBundle rb) {
+		
+		//Constraints
+		Constraints.setTextFieldInteger(txtHours);
+		Constraints.setTextFieldInteger(txtMins);
+		Constraints.setTextFieldInteger(txtSecs);
+		Constraints.setTextFieldInteger(txtMilliseconds);
+		Constraints.setTextFieldMaxLength(txtHours, 4);
+		Constraints.setTextFieldMaxLength(txtMins, 4);
+		Constraints.setTextFieldMaxLength(txtSecs, 4);
+		Constraints.setTextFieldMaxLength(txtMilliseconds, 4);
+		
+		//Spinner
 		SpinnerValueFactory<Integer> valueFactory = 
 				new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 1000);
-		
 		valueFactory.setValue(1);
 		spinnerTimes.setValueFactory(valueFactory);
 		currentValueSpinner = spinnerTimes.getValue();
+		
 	}
 }

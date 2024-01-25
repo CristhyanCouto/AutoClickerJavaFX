@@ -60,7 +60,7 @@
             <Text layoutX="268.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Click Repeat" />
             <RadioButton layoutX="212.0" layoutY="53.0" mnemonicParsing="false" text="Repeat" />
             <RadioButton layoutX="212.0" layoutY="90.0" mnemonicParsing="false" text="Repeat until stopped" />
-            <Spinner fx:id="spinnerTimes" editable="true" layoutX="279.0" layoutY="49.0" prefHeight="5.0" prefWidth="65.0">
+            <Spinner fx:id="spinnerTimes" layoutX="279.0" layoutY="49.0" prefHeight="5.0" prefWidth="65.0">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
